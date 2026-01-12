@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+	
+<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+
+		<!-- Google Fonts -->
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com/"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com/"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Fugaz+One&amp;display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Favicons: Light & Dark Mode -->
+		<!-- Dark Mode Icons -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="dark/favicon-16x16.png"
+			media="(prefers-color-scheme: dark)"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="dark/favicon-32x32.png"
+			media="(prefers-color-scheme: dark)"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="dark/apple-touch-icon.png"
+			media="(prefers-color-scheme: dark)"
+		/>
+
+		<!-- Light Mode Icons -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="light/favicon-16x16.png"
+			media="(prefers-color-scheme: light)"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="light/favicon-32x32.png"
+			media="(prefers-color-scheme: light)"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="light/apple-touch-icon.png"
+			media="(prefers-color-scheme: light)"
+		/>
+
+		<!-- Primary Meta Tags -->
+		<title>PowFPS1 | Full Stack Developer</title>
+		<meta
+			name="title"
+			content="PowFPS1 | Full Stack Developer"
+		/>
+
+		<!-- Open Graph / Facebook -->
+		<meta
+			property="og:type"
+			content="website"
+		/>
+		<meta
+			property="og:url"
+			content="index.html"
+		/>
+		<meta
+			property="og:title"
+			content="PowFPS1 | Full Stack Developer Portfolio"
+		/>
+		<meta
+			property="og:description"
+			content="Explore PowFPS1’s portfolio showcasing modern web applications built using React, Next.js, and Supabase."
+		/>
+		<meta
+			property="og:image"
+			content="og-image.html"
+		/>
+
+		<!-- Twitter -->
+		<meta
+			name="twitter:card"
+			content="summary_large_image"
+		/>
+		<meta
+			property="twitter:url"
+			content="index.html"
+		/>
+		<meta
+			name="twitter:title"
+			content="PowFPS1 | Full Stack Developer Portfolio"
+		/>
+		<meta
+			name="twitter:description"
+			content="Showcasing PowFPS1’s latest web development projects and skills in React, Next.js, and Supabase."
+		/>
+		<meta
+			name="twitter:image"
+			content="og-image.html"
+		/>
+		<script type="module" crossorigin src="/assets/index-Ddtb3SKT.js"></script>
+		<link rel="stylesheet" crossorigin href="/assets/index-KmxZs_VY.css">
+	</head>
+	<body>
+		<div id="root"></div>
+	</body>
+
+	<div id="bw-overlay"></div>
+	<style>
+		/* Black and white overlay */
+		#bw-overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background: transparent;
+			backdrop-filter: grayscale(100%);
+			pointer-events: none;
+			z-index: 10000;
+		}
+
+		/* Bring icons above the overlay */
+		.glow-box,
+		.tech-stack .tech-grid {
+			position: relative;
+			z-index: 10001 !important;
+		}
+		
+		.github-ribbon,
+		.floating-btn {
+			z-index: 10001 !important;
+		}
+
+		/* Ensure floating button children are also lifted if needed */
+		.floating-btn div, .floating-btn span {
+			z-index: 10002;
+		}
+
+		/* Ensure tech grid items are lifted */
+		.glow-box-parent {
+			z-index: 10001 !important;
+			position: relative;
+		}
+
+		/* New Section Styles */
+		.process-grid, .whyme-grid, .testimonials-grid {
+			display: grid;
+			gap: 2rem;
+			margin-top: 2rem;
+		}
+
+		.process-grid {
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		}
+
+		.process-card {
+			background: rgba(255,255,255,0.05);
+			padding: 2rem;
+			border-radius: 12px;
+			border: 1px solid rgba(255,255,255,0.1);
+			position: relative;
+			overflow: hidden;
+		}
+
+		.step-number {
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+			font-size: 3rem;
+			font-weight: bold;
+			opacity: 0.1;
+		}
+
+		.whyme-grid {
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		}
+
+		.whyme-card {
+			text-align: center;
+			padding: 2rem;
+			background: rgba(0,0,0,0.3);
+			border-radius: 16px;
+			border: 1px solid rgba(255,255,255,0.1);
+		}
+
+		.testimonials-grid {
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		}
+
+		.testimonial-card {
+			background: rgba(255,255,255,0.05);
+			padding: 1.5rem;
+			border-radius: 12px;
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
+
+		.testimonial-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-weight: bold;
+		}
+
+		.rating {
+			color: #ffd700; /* Gold */
+		}
+
+		.process-card h3, .whyme-card h3 {
+			margin-bottom: 1rem;
+			font-size: 1.25rem;
+			color: #fff;
+		}
+
+		.process-card p, .whyme-card p, .testimonial-card p {
+			color: #ccc;
+			line-height: 1.6;
+		}
+	</style>
+</html>
