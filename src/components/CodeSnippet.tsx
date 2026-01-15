@@ -16,7 +16,7 @@ export default function CodeSnippet() {
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="md:w-1/2 space-y-6"
+                    className="md:w-1/2 space-y-6 text-center md:text-left"
                 >
                     <h2 className="text-4xl md:text-5xl font-fugaz text-glow">
                         Clean & <br />
@@ -24,7 +24,7 @@ export default function CodeSnippet() {
                             Optimized Code
                         </span>
                     </h2>
-                    <p className="text-gray-400 text-lg leading-relaxed max-w-md">
+                    <p className="text-gray-400 text-lg leading-relaxed max-w-md mx-auto md:mx-0">
                         I write clear, customizable, and scalable Luau code.
                         Every system is made for performance,
                         ensuring your game runs smoothly with thousands of players.
@@ -38,7 +38,7 @@ export default function CodeSnippet() {
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="md:w-1/2 flex justify-center"
+                    className="md:w-1/2 flex justify-center w-full"
                 >
                     <HolographicCode />
                 </motion.div>

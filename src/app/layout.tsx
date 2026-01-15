@@ -24,12 +24,35 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <body
         className={`${openSans.variable} ${fugazOne.variable} antialiased bg-[#0a0a0a] text-white overflow-x-hidden`}
       >
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );
+}
+
+// Simple client wrapper for Lenis
+import { ReactNode, useEffect } from "react";
+import Lenis from "lenis";
+
+function SmoothScroll({ children }: { children: ReactNode }) {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
+  return <>{children}</>;
 }
