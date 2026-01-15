@@ -10,19 +10,19 @@ const testimonials = [
         name: "Alex Johnson",
         role: "CEO, TechStart",
         content: "PowFPS1 delivered an exceptional website that perfectly captures our brand. Highly recommended!",
-        avatar: "/assets/dark/favicon-32x32.png", // Placeholder
+        avatar: "/testimonials/alex.jpg", // Add 'alex.jpg' to public/testimonials
     },
     {
         name: "Sarah Williams",
         role: "Marketing Director",
         content: "The attention to detail and smooth animations are incredible. Our conversion rate has doubled.",
-        avatar: "/assets/light/favicon-32x32.png", // Placeholder
+        avatar: "/testimonials/sarah.jpg", // Add 'sarah.jpg' to public/testimonials
     },
     {
         name: "Michael Chen",
         role: "Founder, Studio X",
         content: "Professional, fast, and easy to work with. The code quality is top-notch.",
-        avatar: "/assets/dark/favicon-16x16.png", // Placeholder
+        avatar: "/testimonials/michael.jpg", // Add 'michael.jpg' to public/testimonials
     },
 ];
 
@@ -62,8 +62,12 @@ export default function Testimonials() {
 
                             <div className="flex items-center gap-4">
                                 <div className="w-10 h-10 rounded-full bg-gray-700 overflow-hidden relative">
-                                    {/* Replace with Image component */}
-                                    <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-purple-500" />
+                                    <Image
+                                        src={testimonial.avatar}
+                                        alt={testimonial.name}
+                                        fill
+                                        className="object-cover"
+                                    />
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-white text-sm">{testimonial.name}</h4>
