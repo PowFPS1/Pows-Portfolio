@@ -1,45 +1,36 @@
-# PowFPS1 Portfolio (V6)
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-This is the static deployment build for the **PowFPS1** personal portfolio website.
+## Getting Started
 
-## Overview
+First, run the development server:
 
-A responsive, high-performance portfolio website showcasing Full Stack Development projects. The site features automatic Dark/Light mode detection and optimized assets.
-
-**Live Domain:** [powsportfolio.dev](https://powsportfolio.dev)
-
-## Project Structure
-
-```text
-/
-├── assets/           # Bundled JavaScript and CSS assets
-├── dark/            # Dark mode favicon/icons
-├── light/           # Light mode favicon/icons
-├── index.html       # Main entry point
-├── og-image.html    # Open Graph image preview
-├── fetch_icons.py   # Utility script to fetch SVG icons
-└── vercel.json      # Vercel deployment configuration
-```
-
-## Features
-
-- **Responsive Design**: Adapts to mobile and desktop viewports.
-- **Theme Support**: Automatically switches icons and styles based on system `prefers-color-scheme` (Dark/Light).
-- **SEO Optimized**: Includes Open Graph tags and meta descriptions.
-
-## Development Tools
-
-### Icon Fetcher
-Included is a Python utility to fetch external SVG icons.
-
-**Usage:**
 ```bash
-python fetch_icons.py
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
-This script retrieves icons from configured URLs (e.g., Simple Icons, Font Awesome) and prints the SVG content.
 
-## Deployment
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project is configured for deployment on **Vercel**.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-See [DEPLOY_GUIDE.md](./DEPLOY_GUIDE.md) for detailed instructions on how to deploy and configure the domain `powsportfolio.dev`.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
