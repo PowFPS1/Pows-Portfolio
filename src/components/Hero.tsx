@@ -47,10 +47,10 @@ export default function Hero() {
                     MY WORK
                 </span>
                 <h1 className="text-5xl md:text-8xl font-fugaz mb-6 text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">
-                    PowFPS1
+                    Pow
                 </h1>
                 <p className="text-xl md:text-2xl font-light text-gray-300 max-w-2xl mx-auto mb-10">
-                    Roblox Scripter
+                    A Roblox Scripter
                 </p>
 
                 <motion.div
