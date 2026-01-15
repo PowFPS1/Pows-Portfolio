@@ -10,7 +10,7 @@ const projects = [
         title: "Inventory System",
         description: "A highly optimized, data-store backed inventory system handling thousands of items.",
         tech: ["Luau", "ProfileService", "Roact"],
-        image: "/assets/dark/apple-touch-icon.png", // Placeholder image
+        videoId: "1078818471", // Biggest
         link: "#",
         github: "#",
         featured: true,
@@ -19,7 +19,7 @@ const projects = [
         title: "Combat Engine",
         description: "Lag-compensated melee and ranged combat system with custom hitboxes.",
         tech: ["Luau", "Raycasting", "Network Optimization"],
-        image: "/assets/light/favicon-32x32.png", // Placeholder
+        videoId: "1078820191",
         link: "#",
         github: "#",
         featured: false,
@@ -28,7 +28,7 @@ const projects = [
         title: "Tycoon Core",
         description: "Modular tycoon framework allowing easy creation of droppers, upgraders, and buttons.",
         tech: ["Luau", "OOP", "StreamingEnabled"],
-        image: "/assets/dark/favicon-16x16.png", // Placeholder
+        videoId: "1078819888",
         link: "#",
         github: "#",
         featured: false,
@@ -61,12 +61,17 @@ export default function Projects() {
                             className={`group relative rounded-xl overflow-hidden bg-black/40 border border-white/10 hover:border-white/50 transition-all ${project.featured ? "md:col-span-2 lg:col-span-2 row-span-2" : ""
                                 }`}
                         >
-                            {/* Image Area - Placeholder */}
-                            <div className="aspect-video w-full bg-gradient-to-br from-gray-900 to-black relative">
-                                {/* Replace this with actual Image component when you have screenshots */}
-                                <div className="absolute inset-0 flex items-center justify-center text-white/10 text-4xl font-bold uppercase">
-                                    {project.title} Preview
-                                </div>
+                            {/* Video Area */}
+                            <div className="aspect-video w-full bg-black relative">
+                                <iframe
+                                    src={`https://player.vimeo.com/video/${project.videoId}?badge=0&autopause=0&player_id=0&app_id=58479&background=1&autoplay=1&loop=1&byline=0&title=0`}
+                                    className="absolute inset-0 w-full h-full"
+                                    frameBorder="0"
+                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                                    title={project.title}
+                                ></iframe>
+                                {/* Overlay to prevent interaction with video controls if desired, or allow it */}
+                                <div className="absolute inset-0 pointer-events-none bg-black/10" />
                             </div>
 
                             {/* Content Overlay */}
