@@ -30,14 +30,7 @@ export default function CodeSnippet() {
                         ensuring your game runs smoothly with thousands of players.
                     </p>
 
-                    <ul className="space-y-3">
-                        {['Modular Architecture', 'Type-Safe Luau', 'Secure Networking', 'DataStore Safety'].map((item, i) => (
-                            <li key={i} className="flex items-center gap-3 text-gray-300">
-                                <div className="h-1.5 w-1.5 rounded-full bg-white" />
-                                {item}
-                            </li>
-                        ))}
-                    </ul>
+
                 </motion.div>
 
                 {/* Holographic Card */}
