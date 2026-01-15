@@ -5,9 +5,13 @@ import { ArrowDown } from "lucide-react";
 
 const FloatingCard = ({ text, author, className, delay }: { text: string; author: string; className?: string; delay: number }) => (
     <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay, duration: 0.8 }}
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1, y: [0, -15, 0] }}
+        transition={{
+            opacity: { duration: 0.8, delay },
+            scale: { duration: 0.8, delay },
+            y: { duration: 6, repeat: Infinity, ease: "easeInOut" }
+        }}
         className={`absolute hidden lg:block p-6 rounded-xl bg-black/80 backdrop-blur-md border border-white/10 max-w-[280px] z-0 ${className}`}
     >
         <p className="text-gray-300 text-sm italic mb-4">"{text}"</p>
