@@ -6,7 +6,7 @@ import { Copy, Check, Clock, Info } from "lucide-react";
 
 export default function Contact() {
     const [copied, setCopied] = useState(false);
-    const discordHandle = "powfps"; // Update with actual handle
+    const discordHandle = "PowFPS1"; // Update with actual handle
 
     const handleCopy = () => {
         navigator.clipboard.writeText(discordHandle);
@@ -64,7 +64,7 @@ export default function Contact() {
 
                     {/* X Button */}
                     <a
-                        href="https://x.com/powfps" // Update if needed
+                        href="https://x.com/PowScripts" // Update if needed
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl py-4 flex items-center justify-center gap-2 text-gray-300 hover:text-white transition-all"
