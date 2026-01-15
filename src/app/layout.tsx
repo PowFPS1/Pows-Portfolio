@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fugaz_One, Open_Sans } from "next/font/google";
 import "./globals.css";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const fugazOne = Fugaz_One({
   weight: "400",
@@ -32,27 +33,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
-
-// Simple client wrapper for Lenis
-import { ReactNode, useEffect } from "react";
-import Lenis from "lenis";
-
-function SmoothScroll({ children }: { children: ReactNode }) {
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
-
-  return <>{children}</>;
 }
