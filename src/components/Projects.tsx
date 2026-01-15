@@ -6,23 +6,23 @@ import Image from "next/image";
 // Placeholder data - user needs to update this
 const projects = [
     {
-        title: "Inventory System",
-        description: "A highly optimized, data-store backed inventory system handling thousands of items.",
-        tech: ["Luau", "ProfileService", "Roact"],
+        title: "Parkour System",
+        description: "A highly optimized parkour system.",
+        tech: ["Raycasting", "State Machines", "Vector Math"],
         videoId: "1078818471", // Biggest
         featured: true,
     },
     {
-        title: "Combat Engine",
-        description: "Lag-compensated melee and ranged combat system with custom hitboxes.",
-        tech: ["Luau", "Raycasting", "Network Optimization"],
+        title: "Advanced Combat System",
+        description: "Lag compensated melee combat system with custom hitboxes.",
+        tech: ["Lag Compensation", "Spatial Query", "OOP"],
         videoId: "1078820191",
         featured: false,
     },
     {
-        title: "Tycoon Core",
-        description: "Modular tycoon framework allowing easy creation of droppers, upgraders, and buttons.",
-        tech: ["Luau", "OOP", "StreamingEnabled"],
+        title: "Advanced Basketball System",
+        description: "Modular basketball system.",
+        tech: ["Projectile Physics", "Arc Math", "Replication"],
         videoId: "1078819888",
         featured: false,
     },
