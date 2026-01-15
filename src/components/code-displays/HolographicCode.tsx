@@ -49,7 +49,7 @@ export default function HolographicCode() {
                 transformStyle: "preserve-3d",
                 transform,
             }}
-            className="relative w-full max-w-md rounded-xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 p-[1px]"
+            className="relative w-full max-w-md rounded-xl bg-gradient-to-br from-white/20 to-zinc-800/50 p-[1px]"
         >
             <div
                 className="relative h-full w-full rounded-xl bg-black/90 p-6 shadow-2xl backdrop-blur-md"
@@ -68,25 +68,25 @@ export default function HolographicCode() {
                 <div className="relative z-10 flex flex-col gap-4">
                     <div className="flex items-center justify-between border-b border-white/10 pb-4">
                         <div className="flex gap-2">
-                            <div className="h-3 w-3 rounded-full bg-red-500" />
-                            <div className="h-3 w-3 rounded-full bg-yellow-500" />
-                            <div className="h-3 w-3 rounded-full bg-green-500" />
+                            <div className="h-3 w-3 rounded-full bg-zinc-600" />
+                            <div className="h-3 w-3 rounded-full bg-zinc-700" />
+                            <div className="h-3 w-3 rounded-full bg-zinc-800" />
                         </div>
                         <span className="text-xs font-mono text-gray-500">InventorySystem.lua</span>
                     </div>
 
                     <pre className="overflow-x-auto text-sm font-mono text-gray-300 scrollbar-thin scrollbar-thumb-white/20">
                         <code>
-                            <span className="text-pink-500">local</span> Inventory = {"{}"}
+                            <span className="text-white font-bold">local</span> Inventory = {"{}"}
                             {"\n\n"}
-                            <span className="text-purple-400">function</span> Inventory.<span className="text-blue-400">AddItem</span>(player, item)
-                            {"\n"}  <span className="text-pink-500">local</span> data = <span className="text-yellow-300">PlayerData</span>:Get(player)
-                            {"\n"}  <span className="text-blue-400">table.insert</span>(data.Items, item)
-                            {"\n"}  <span className="text-green-400">print</span>(<span className="text-yellow-200">"Item added: "</span> .. item.Name)
+                            <span className="text-gray-400 font-bold">function</span> Inventory.<span className="text-white">AddItem</span>(player, item)
+                            {"\n"}  <span className="text-white font-bold">local</span> data = <span className="text-gray-300">PlayerData</span>:Get(player)
+                            {"\n"}  <span className="text-white">table.insert</span>(data.Items, item)
+                            {"\n"}  <span className="text-white">print</span>(<span className="text-gray-500">"Item added: "</span> .. item.Name)
                             {"\n"}
-                            <span className="text-purple-400">end</span>
+                            <span className="text-gray-400 font-bold">end</span>
                             {"\n\n"}
-                            <span className="text-pink-500">return</span> Inventory
+                            <span className="text-white font-bold">return</span> Inventory
                         </code>
                     </pre>
                 </div>
