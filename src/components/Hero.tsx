@@ -3,13 +3,41 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 
+const FloatingCard = ({ text, author, className, delay }: { text: string; author: string; className?: string; delay: number }) => (
+    <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay, duration: 0.8 }}
+        className={`absolute hidden lg:block p-6 rounded-xl bg-black/80 backdrop-blur-md border border-white/10 max-w-[280px] z-0 ${className}`}
+    >
+        <p className="text-gray-300 text-sm italic mb-4">"{text}"</p>
+        <p className="text-right text-gray-400 text-xs font-bold">- {author}</p>
+    </motion.div>
+);
+
 export default function Hero() {
     return (
-        <section className="relative h-screen flex flex-col items-center justify-center text-center px-4 z-10">
+        <section className="relative h-screen flex flex-col items-center justify-center text-center px-4 z-10 overflow-hidden">
+
+            {/* Floating Testimonials */}
+            <FloatingCard
+                text="Delivered fast and did a great job. Trustworthy and professional. 🔥"
+                author="sh4d3fr0sty"
+                className="top-1/4 left-[10%] -rotate-6"
+                delay={1.2}
+            />
+            <FloatingCard
+                text="Got it done in 2 hours, and it works perfectly. 10/10!"
+                author="imbillysilly"
+                className="top-1/3 right-[10%] rotate-3"
+                delay={1.4}
+            />
+
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
+                className="relative z-10"
             >
                 <span className="text-sm md:text-base tracking-[0.3em] text-white/60 mb-4 block animate-fade-in-up">
                     MY WORK
@@ -38,7 +66,7 @@ export default function Hero() {
             </motion.div>
 
             <motion.div
-                className="absolute bottom-10"
+                className="absolute bottom-10 z-10"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.5, duration: 1 }}

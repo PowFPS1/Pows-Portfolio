@@ -9,37 +9,37 @@ const testimonials = [
     {
         name: "zehvyn",
         role: "Client",
-        content: "Great service! Highly recommended.",
+        content: "Working with Pow was super smooth. He's very professional and did exactly what I asked in a timely manner.",
         avatar: "/testimonials/s5MLo1eOoXsmokIzGQYEWIWyazA.avif",
     },
     {
         name: "ceazeh",
         role: "Client",
-        content: "Amazing work, very professional.",
+        content: "The end result was good, and it improved the player experience.",
         avatar: "/testimonials/rCxghxDeAO7IhZGvQFugw4zDZdM.avif",
     },
     {
         name: "pikcal__",
         role: "Client",
-        content: "Exceeded my expectations!",
+        content: "Script works perfectly and is well made. He made it fully configurable as requested. If youre looking for a real scripter who goes above and beyond, Pow is the person youre looking for.",
         avatar: "/testimonials/E14eJPV7HgiPWch3VSdOXcw.webp",
     },
     {
         name: "falconteam",
         role: "Client",
-        content: "Top notch quality and speed.",
+        content: "Pow did the 4 things I needed for my game quickly, and excellent, it met my expectations. 10/10",
         avatar: "/testimonials/lcwAFp4Rg0YCP4t1Pu5LuwXmXjs.webp",
     },
     {
         name: ".trimetalxsx",
         role: "Client",
-        content: "A pleasure to work with.",
+        content: "Pow made the whole process super smooth. They got exactly what I was going for without much back and forth, and the system turned out even better than I expected. Solid work all around.",
         avatar: "/testimonials/WkEwGHB8ZwwZJD705sMGrhhwEKo.avif",
     },
     {
         name: "warpedchickenbone",
         role: "Client",
-        content: "Fantastic results, will buy again.",
+        content: "Pow had my system done in 2 hours, helped me with so many things, amazing job, would recommend.",
         avatar: "/testimonials/KrA2CXgB3TYOXjWNAJV7kTkstU.avif",
     },
 ];
