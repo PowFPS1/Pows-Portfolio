@@ -7,23 +7,23 @@ import { Search, PenTool, Code, Rocket } from "lucide-react";
 const steps = [
     {
         icon: <Search className="w-6 h-6" />,
-        title: "Discovery",
-        description: "I start by understanding your goals, target audience, and requirements.",
+        title: "Let's Get In Touch",
+        description: "Start by messaging me through my discord to discuss your ideas, vision, and requirements.",
     },
     {
         icon: <PenTool className="w-6 h-6" />,
-        title: "Design",
-        description: "Creating wireframes and visual designs that align with your brand.",
+        title: "Get your ideas",
+        description: "Tell me your ideas and vision, and I’ll create functional systems that exceed your expectations.",
     },
     {
         icon: <Code className="w-6 h-6" />,
-        title: "Development",
-        description: "Building your application using the latest technologies and best practices.",
+        title: "Start Development",
+        description: "I turn your ideas and vision into a scalable system, ready to use.",
     },
     {
         icon: <Rocket className="w-6 h-6" />,
-        title: "Launch",
-        description: "Deploying your site and ensuring everything runs smoothly.",
+        title: "And Hand Over",
+        description: "Receive a fully tested, polished, and high quality system based on your needs, with support.",
     },
 ];
 
