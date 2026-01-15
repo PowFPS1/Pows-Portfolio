@@ -14,7 +14,7 @@ const features = [
         icon: <Code className="w-6 h-6" />,
         title: "What I Do",
         description:
-            "Building customizable and scalable systems is my passion. I specialize in game logic, system architecture, and player experience tailored to your project needs.",
+            "Building customizable and scalable systems is my passion. I specialize in game logic, system architecture, and player experience based on your project needs.",
     },
     {
         icon: <Zap className="w-6 h-6" />,
