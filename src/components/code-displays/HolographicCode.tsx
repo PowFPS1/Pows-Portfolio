@@ -84,7 +84,7 @@ export default function HolographicCode() {
                             {"\n"}  stats.Name = <span className="text-gray-500">"leaderstats"</span>
                             {"\n"}  stats.Parent = player
                             {"\n\n"}
-                            {"  "}<span className="text-gray-500 italic">-- Give new players some starter cash</span>
+                            {"  "}<span className="text-gray-500 italic">-- Give new players starter cash</span>
                             {"\n"}  <span className="text-white font-bold">local</span> cash = <span className="text-white">Instance.new</span>(<span className="text-gray-500">"IntValue"</span>)
                             {"\n"}  cash.Name = <span className="text-gray-500">"Cash"</span>
                             {"\n"}  cash.Value = <span className="text-white">100</span>
