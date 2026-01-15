@@ -1,17 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Search, PenTool, Code, Rocket } from "lucide-react";
+import { MessageSquare, Lightbulb, Code, Package } from "lucide-react";
 
 // Placeholder data - update with your actual process steps
 const steps = [
     {
-        icon: <Search className="w-6 h-6" />,
+        icon: <MessageSquare className="w-6 h-6" />,
         title: "Let's Get In Touch",
         description: "Start by messaging me through my discord to discuss your ideas, vision, and requirements.",
     },
     {
-        icon: <PenTool className="w-6 h-6" />,
+        icon: <Lightbulb className="w-6 h-6" />,
         title: "Get your ideas",
         description: "Tell me your ideas and vision, and I’ll create functional systems that exceed your expectations.",
     },
@@ -21,7 +21,7 @@ const steps = [
         description: "I turn your ideas and vision into a scalable system, ready to use.",
     },
     {
-        icon: <Rocket className="w-6 h-6" />,
+        icon: <Package className="w-6 h-6" />,
         title: "And Hand Over",
         description: "Receive a fully tested, polished, and high quality system based on your needs, with support.",
     },
