@@ -32,7 +32,7 @@ export default function About() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="text-4xlmd:text-5xl font-fugaz text-center mb-16 text-glow"
+                    className="text-4xl md:text-5xl font-fugaz text-center mb-16 text-glow"
                 >
                     Why Me?
                 </motion.h2>
