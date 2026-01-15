@@ -1,0 +1,96 @@
+"use client";
+
+import React, { useRef } from "react";
+import { motion, useMotionTemplate, useMotionValue, useSpring, useTransform } from "framer-motion";
+
+const ROTATION_RANGE = 20; // Degrees
+const HALF_ROTATION_RANGE = ROTATION_RANGE / 2;
+
+export default function HolographicCode() {
+    const ref = useRef<HTMLDivElement>(null);
+
+    const x = useMotionValue(0);
+    const y = useMotionValue(0);
+
+    const xSpring = useSpring(x);
+    const ySpring = useSpring(y);
+
+    const transform = useMotionTemplate`rotateX(${xSpring}deg) rotateY(${ySpring}deg)`;
+
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        if (!ref.current) return;
+
+        const rect = ref.current.getBoundingClientRect();
+
+        const width = rect.width;
+        const height = rect.height;
+
+        const mouseX = (e.clientX - rect.left) * ROTATION_RANGE;
+        const mouseY = (e.clientY - rect.top) * ROTATION_RANGE;
+
+        const rX = (mouseY / height - HALF_ROTATION_RANGE) * -1;
+        const rY = mouseX / width - HALF_ROTATION_RANGE;
+
+        x.set(rX);
+        y.set(rY);
+    };
+
+    const handleMouseLeave = () => {
+        x.set(0);
+        y.set(0);
+    };
+
+    return (
+        <motion.div
+            ref={ref}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            style={{
+                transformStyle: "preserve-3d",
+                transform,
+            }}
+            className="relative w-full max-w-md rounded-xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 p-[1px]"
+        >
+            <div
+                className="relative h-full w-full rounded-xl bg-black/90 p-6 shadow-2xl backdrop-blur-md"
+                style={{ transform: "translateZ(50px)" }}
+            >
+                {/* Glow Element */}
+                <div
+                    className="pointer-events-none absolute inset-0 z-0 rounded-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                    style={{
+                        background:
+                            "radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.06), transparent 40%)",
+                    }}
+                />
+
+                {/* Content */}
+                <div className="relative z-10 flex flex-col gap-4">
+                    <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                        <div className="flex gap-2">
+                            <div className="h-3 w-3 rounded-full bg-red-500" />
+                            <div className="h-3 w-3 rounded-full bg-yellow-500" />
+                            <div className="h-3 w-3 rounded-full bg-green-500" />
+                        </div>
+                        <span className="text-xs font-mono text-gray-500">InventorySystem.lua</span>
+                    </div>
+
+                    <pre className="overflow-x-auto text-sm font-mono text-gray-300 scrollbar-thin scrollbar-thumb-white/20">
+                        <code>
+                            <span className="text-pink-500">local</span> Inventory = {"{}"}
+                            {"\n\n"}
+                            <span className="text-purple-400">function</span> Inventory.<span className="text-blue-400">AddItem</span>(player, item)
+                            {"\n"}  <span className="text-pink-500">local</span> data = <span className="text-yellow-300">PlayerData</span>:Get(player)
+                            {"\n"}  <span className="text-blue-400">table.insert</span>(data.Items, item)
+                            {"\n"}  <span className="text-green-400">print</span>(<span className="text-yellow-200">"Item added: "</span> .. item.Name)
+                            {"\n"}
+                            <span className="text-purple-400">end</span>
+                            {"\n\n"}
+                            <span className="text-pink-500">return</span> Inventory
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </motion.div>
+    );
+}
