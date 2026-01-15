@@ -16,7 +16,7 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: "PowFPS1 | Roblox Scripter",
-  description: "Portfolio of PowFPS1, a 17-year-old Roblox Scripter with 5+ years of experience and 180+ million visits.",
+  description: "Portfolio of PowFPS1, a 17 year old Roblox Scripter with 5+ years of experience and 180+ million visits.",
 };
 
 export default function RootLayout({
