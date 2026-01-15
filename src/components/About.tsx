@@ -14,13 +14,13 @@ const features = [
         icon: <Code className="w-6 h-6" />,
         title: "What I Do",
         description:
-            "Building efficient and scalable systems is my passion. I specialize in game logic, system architecture, and player experience.",
+            "Building customizable and scalable systems is my passion. I specialize in game logic, system architecture, and player experience tailored to your project needs.",
     },
     {
         icon: <Zap className="w-6 h-6" />,
         title: "Efficiency First",
         description:
-            "I write clean, optimized Luau code designed to handle high player counts without lag.",
+            "I write clean, optimized Luau code made to handle high player counts and prevent lag.",
     },
 ];
 
