@@ -3,8 +3,9 @@
 @theme {
   --font-sans: var(--font-sans);
   --font-fugaz: var(--font-fugaz);
-  
-  --color-primary: #3b82f6; /* Example primary color */
+
+  --color-primary: #ffffff;
+  /* White accent */
 }
 
 /* Custom Utilities */
@@ -16,15 +17,38 @@
 
 /* Star Animations */
 @keyframes twinkle {
-  0%, 100% { opacity: 0.3; transform: scale(0.8); }
-  50% { opacity: 1; transform: scale(1.2); }
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
 }
 
 @keyframes shoot {
-  0% { transform: translateX(0) translateY(0) rotate(-45deg); opacity: 0; }
-  10% { opacity: 1; }
-  20% { transform: translateX(300px) translateY(300px) rotate(-45deg); opacity: 0; }
-  100% { transform: translateX(300px) translateY(300px) rotate(-45deg); opacity: 0; }
+  0% {
+    transform: translateX(0) translateY(0) rotate(-45deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  20% {
+    transform: translateX(300px) translateY(300px) rotate(-45deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(300px) translateY(300px) rotate(-45deg);
+    opacity: 0;
+  }
 }
 
 .star {
@@ -39,13 +63,14 @@
   position: absolute;
   width: 100px;
   height: 2px;
-  background: linear-gradient(90deg, rgba(255,255,255,1), transparent);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1), transparent);
   animation: shoot 10s linear infinite;
   animation-delay: var(--delay, 0s);
   opacity: 0;
 }
 
 body {
-  background: #050505; /* Deep dark background */
+  background: #050505;
+  /* Deep dark background */
   color: #ffffff;
 }

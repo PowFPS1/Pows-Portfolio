@@ -46,7 +46,7 @@ export default function About() {
                             transition={{ duration: 0.5, delay: index * 0.2 }}
                             className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 hover:bg-white/10 transition-colors backdrop-blur-sm group"
                         >
-                            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+                            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 text-white mb-6 group-hover:scale-110 transition-transform">
                                 {feature.icon}
                             </div>
                             <h3 className="text-xl font-bold mb-4 font-sans">{feature.title}</h3>

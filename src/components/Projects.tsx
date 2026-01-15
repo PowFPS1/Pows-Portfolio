@@ -45,9 +45,9 @@ export default function Projects() {
                     transition={{ duration: 0.5 }}
                     className="text-center mb-16"
                 >
-                    <span className="text-sm tracking-widest text-blue-400 uppercase mb-2 block">My Work</span>
+                    <span className="text-sm tracking-widest text-white/70 uppercase mb-2 block">My Work</span>
                     <h2 className="text-4xl md:text-5xl font-fugaz text-glow">
-                        Featured Projects
+                        Featured Systems
                     </h2>
                 </motion.div>
 
@@ -58,11 +58,11 @@ export default function Projects() {
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className={`group relative rounded-xl overflow-hidden bg-black/40 border border-white/10 hover:border-blue-500/50 transition-all ${project.featured ? "md:col-span-2 lg:col-span-2 row-span-2" : ""
+                            className={`group relative rounded-xl overflow-hidden bg-black/40 border border-white/10 hover:border-white/50 transition-all ${project.featured ? "md:col-span-2 lg:col-span-2 row-span-2" : ""
                                 }`}
                         >
                             {/* Image Area - Placeholder */}
-                            <div className="aspect-video w-full bg-gradient-to-br from-gray-800 to-black relative">
+                            <div className="aspect-video w-full bg-gradient-to-br from-gray-900 to-black relative">
                                 {/* Replace this with actual Image component when you have screenshots */}
                                 <div className="absolute inset-0 flex items-center justify-center text-white/10 text-4xl font-bold uppercase">
                                     {project.title} Preview
@@ -75,16 +75,16 @@ export default function Projects() {
                                 <p className="text-gray-300 text-sm mb-4 line-clamp-2">{project.description}</p>
                                 <div className="flex gap-2 mb-4 flex-wrap">
                                     {project.tech.map(t => (
-                                        <span key={t} className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">
+                                        <span key={t} className="text-xs bg-white/10 text-white px-2 py-1 rounded border border-white/10">
                                             {t}
                                         </span>
                                     ))}
                                 </div>
                                 <div className="flex gap-4">
-                                    <a href={project.link} className="flex items-center gap-2 text-white hover:text-blue-400 transition-colors">
+                                    <a href={project.link} className="flex items-center gap-2 text-white hover:text-gray-300 transition-colors">
                                         <ExternalLink size={18} /> Live Demo
                                     </a>
-                                    <a href={project.github} className="flex items-center gap-2 text-white hover:text-blue-400 transition-colors">
+                                    <a href={project.github} className="flex items-center gap-2 text-white hover:text-gray-300 transition-colors">
                                         <Github size={18} /> Code
                                     </a>
                                 </div>

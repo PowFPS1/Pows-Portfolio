@@ -42,7 +42,7 @@ export default function Process() {
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
                     {/* Connecting Line (Desktop Only) */}
-                    <div className="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent -z-10" />
+                    <div className="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-white/20 to-transparent -z-10" />
 
                     {steps.map((step, index) => (
                         <motion.div
@@ -50,9 +50,9 @@ export default function Process() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.2 }}
-                            className="group relative flex flex-col items-center text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-colors backdrop-blur-sm"
+                            className="group relative flex flex-col items-center text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-colors backdrop-blur-sm"
                         >
-                            <div className="w-16 h-16 rounded-full bg-black border border-blue-500/50 flex items-center justify-center text-blue-400 mb-6 relative z-10 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+                            <div className="w-16 h-16 rounded-full bg-black border border-white/20 flex items-center justify-center text-white mb-6 relative z-10 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(255,255,255,0.1)]">
                                 {step.icon}
                             </div>
                             <div className="absolute top-6 right-6 text-6xl font-fugaz text-white/5 pointer-events-none select-none">
