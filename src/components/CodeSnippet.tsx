@@ -26,7 +26,7 @@ export default function CodeSnippet() {
                     </h2>
                     <p className="text-gray-400 text-lg leading-relaxed max-w-md">
                         I write clear, customizable, and scalable Luau code.
-                        Every system is designed for performance,
+                        Every system is made for performance,
                         ensuring your game runs smoothly with thousands of players.
                     </p>
 

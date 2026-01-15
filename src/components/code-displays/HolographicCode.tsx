@@ -72,21 +72,25 @@ export default function HolographicCode() {
                             <div className="h-3 w-3 rounded-full bg-zinc-700" />
                             <div className="h-3 w-3 rounded-full bg-zinc-800" />
                         </div>
-                        <span className="text-xs font-mono text-gray-500">InventorySystem.lua</span>
+                        <span className="text-xs font-mono text-gray-500">Leaderstats.server.lua</span>
                     </div>
 
                     <pre className="overflow-x-auto text-sm font-mono text-gray-300 scrollbar-thin scrollbar-thumb-white/20">
                         <code>
-                            <span className="text-white font-bold">local</span> Inventory = {"{}"}
+                            <span className="text-white font-bold">local</span> Players = <span className="text-gray-300">game</span>:<span className="text-white">GetService</span>(<span className="text-gray-500">"Players"</span>)
                             {"\n\n"}
-                            <span className="text-gray-400 font-bold">function</span> Inventory.<span className="text-white">AddItem</span>(player, item)
-                            {"\n"}  <span className="text-white font-bold">local</span> data = <span className="text-gray-300">PlayerData</span>:Get(player)
-                            {"\n"}  <span className="text-white">table.insert</span>(data.Items, item)
-                            {"\n"}  <span className="text-white">print</span>(<span className="text-gray-500">"Item added: "</span> .. item.Name)
+                            <span className="text-gray-300">Players.PlayerAdded</span>:<span className="text-white">Connect</span>(<span className="text-gray-400 font-bold">function</span>(player)
+                            {"\n"}  <span className="text-white font-bold">local</span> stats = <span className="text-white">Instance.new</span>(<span className="text-gray-500">"Folder"</span>)
+                            {"\n"}  stats.Name = <span className="text-gray-500">"leaderstats"</span>
+                            {"\n"}  stats.Parent = player
+                            {"\n\n"}
+                            {"  "}<span className="text-gray-500 italic">-- Give new players some starter cash</span>
+                            {"\n"}  <span className="text-white font-bold">local</span> cash = <span className="text-white">Instance.new</span>(<span className="text-gray-500">"IntValue"</span>)
+                            {"\n"}  cash.Name = <span className="text-gray-500">"Cash"</span>
+                            {"\n"}  cash.Value = <span className="text-white">100</span>
+                            {"\n"}  cash.Parent = stats
                             {"\n"}
-                            <span className="text-gray-400 font-bold">end</span>
-                            {"\n\n"}
-                            <span className="text-white font-bold">return</span> Inventory
+                            <span className="text-gray-400 font-bold">end</span>)
                         </code>
                     </pre>
                 </div>
