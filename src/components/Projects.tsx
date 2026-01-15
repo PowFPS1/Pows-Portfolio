@@ -7,27 +7,27 @@ import Image from "next/image";
 // Placeholder data - user needs to update this
 const projects = [
     {
-        title: "Project Alpha",
-        description: "A revolutionary platform for managing workflows.",
-        tech: ["Next.js", "Supabase", "Tailwind"],
+        title: "Inventory System",
+        description: "A highly optimized, data-store backed inventory system handling thousands of items.",
+        tech: ["Luau", "ProfileService", "Roact"],
         image: "/assets/dark/apple-touch-icon.png", // Placeholder image
         link: "#",
         github: "#",
         featured: true,
     },
     {
-        title: "Beta App",
-        description: "Social media dashboard with real-time analytics.",
-        tech: ["React", "Firebase", "Redux"],
+        title: "Combat Engine",
+        description: "Lag-compensated melee and ranged combat system with custom hitboxes.",
+        tech: ["Luau", "Raycasting", "Network Optimization"],
         image: "/assets/light/favicon-32x32.png", // Placeholder
         link: "#",
         github: "#",
         featured: false,
     },
     {
-        title: "Gamma Tools",
-        description: "Utility library for developers.",
-        tech: ["TypeScript", "Node.js"],
+        title: "Tycoon Core",
+        description: "Modular tycoon framework allowing easy creation of droppers, upgraders, and buttons.",
+        tech: ["Luau", "OOP", "StreamingEnabled"],
         image: "/assets/dark/favicon-16x16.png", // Placeholder
         link: "#",
         github: "#",
@@ -37,7 +37,7 @@ const projects = [
 
 export default function Projects() {
     return (
-        <section id="portfolio" className="py-20 px-4 bg-white/5">
+        <section id="portfolio" className="py-20 px-4">
             <div className="max-w-7xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
