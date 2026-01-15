@@ -11,8 +11,6 @@ const projects = [
         description: "A highly optimized, data-store backed inventory system handling thousands of items.",
         tech: ["Luau", "ProfileService", "Roact"],
         videoId: "1078818471", // Biggest
-        link: "#",
-        github: "#",
         featured: true,
     },
     {
@@ -20,8 +18,6 @@ const projects = [
         description: "Lag-compensated melee and ranged combat system with custom hitboxes.",
         tech: ["Luau", "Raycasting", "Network Optimization"],
         videoId: "1078820191",
-        link: "#",
-        github: "#",
         featured: false,
     },
     {
@@ -29,8 +25,6 @@ const projects = [
         description: "Modular tycoon framework allowing easy creation of droppers, upgraders, and buttons.",
         tech: ["Luau", "OOP", "StreamingEnabled"],
         videoId: "1078819888",
-        link: "#",
-        github: "#",
         featured: false,
     },
 ];
@@ -84,14 +78,6 @@ export default function Projects() {
                                             {t}
                                         </span>
                                     ))}
-                                </div>
-                                <div className="flex gap-4">
-                                    <a href={project.link} className="flex items-center gap-2 text-white hover:text-gray-300 transition-colors">
-                                        <ExternalLink size={18} /> Live Demo
-                                    </a>
-                                    <a href={project.github} className="flex items-center gap-2 text-white hover:text-gray-300 transition-colors">
-                                        <Github size={18} /> Code
-                                    </a>
                                 </div>
                             </div>
 
