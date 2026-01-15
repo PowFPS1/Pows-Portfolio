@@ -7,22 +7,40 @@ import Image from "next/image";
 // Placeholder data
 const testimonials = [
     {
-        name: "Alex Johnson",
-        role: "CEO, TechStart",
-        content: "PowFPS1 delivered an exceptional website that perfectly captures our brand. Highly recommended!",
-        avatar: "/testimonials/alex.jpg", // Add 'alex.jpg' to public/testimonials
+        name: "zehvyn",
+        role: "Client",
+        content: "Great service! Highly recommended.",
+        avatar: "/testimonials/s5MLo1eOoXsmokIzGQYEWIWyazA.avif",
     },
     {
-        name: "Sarah Williams",
-        role: "Marketing Director",
-        content: "The attention to detail and smooth animations are incredible. Our conversion rate has doubled.",
-        avatar: "/testimonials/sarah.jpg", // Add 'sarah.jpg' to public/testimonials
+        name: "ceazeh",
+        role: "Client",
+        content: "Amazing work, very professional.",
+        avatar: "/testimonials/rCxghxDeAO7IhZGvQFugw4zDZdM.avif",
     },
     {
-        name: "Michael Chen",
-        role: "Founder, Studio X",
-        content: "Professional, fast, and easy to work with. The code quality is top-notch.",
-        avatar: "/testimonials/michael.jpg", // Add 'michael.jpg' to public/testimonials
+        name: "pikcal__",
+        role: "Client",
+        content: "Exceeded my expectations!",
+        avatar: "/testimonials/E14eJPV7HgiPWch3VSdOXcw.webp",
+    },
+    {
+        name: "falconteam",
+        role: "Client",
+        content: "Top notch quality and speed.",
+        avatar: "/testimonials/lcwAFp4Rg0YCP4t1Pu5LuwXmXjs.webp",
+    },
+    {
+        name: ".trimetalxsx",
+        role: "Client",
+        content: "A pleasure to work with.",
+        avatar: "/testimonials/WkEwGHB8ZwwZJD705sMGrhhwEKo.avif",
+    },
+    {
+        name: "warpedchickenbone",
+        role: "Client",
+        content: "Fantastic results, will buy again.",
+        avatar: "/testimonials/KrA2CXgB3TYOXjWNAJV7kTkstU.avif",
     },
 ];
 
