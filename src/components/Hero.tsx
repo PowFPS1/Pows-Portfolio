@@ -50,7 +50,7 @@ export default function Hero() {
                     PowFPS1
                 </h1>
                 <p className="text-xl md:text-2xl font-light text-gray-300 max-w-2xl mx-auto mb-10">
-                    Full Stack Developer
+                    Roblox Scripter
                 </p>
 
                 <motion.div

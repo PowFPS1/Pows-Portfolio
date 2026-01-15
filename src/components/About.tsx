@@ -8,19 +8,19 @@ const features = [
         icon: <User className="w-6 h-6" />,
         title: "Who I Am",
         description:
-            "I'm a passionate Full Stack Developer with a knack for building robust and scalable web applications.",
+            "I am a 17 year old Roblox scripter with 5+ years of experience. I have contributed over 180+ million visits.",
     },
     {
         icon: <Code className="w-6 h-6" />,
-        title: "My Tech Stack",
+        title: "What I Do",
         description:
-            "Expertise in React, Next.js, TypeScript, Tailwind CSS, Supabase, and more.",
+            "Building efficient and scalable systems is my passion. I specialize in game logic, system architecture, and player experience.",
     },
     {
         icon: <Zap className="w-6 h-6" />,
-        title: "Fast & Efficient",
+        title: "Efficiency First",
         description:
-            "I prioritize performance and user experience, ensuring your site loads fast and looks great.",
+            "I write clean, optimized Luau code designed to handle high player counts without lag.",
     },
 ];
 
