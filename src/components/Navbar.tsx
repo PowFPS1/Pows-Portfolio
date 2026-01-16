@@ -7,11 +7,11 @@ import { ChevronDown } from "lucide-react";
 const navItems = [
     { name: "Home", id: "home" },
     { name: "About", id: "about" },
+    { name: "Process", id: "process" },
     { name: "Work", id: "portfolio" },
 ];
 
 const moreItems = [
-    { name: "Process", id: "process" },
     { name: "Testimonials", id: "testimonials" },
 ];
 
