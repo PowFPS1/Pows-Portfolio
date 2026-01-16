@@ -29,7 +29,7 @@ const steps = [
 
 export default function Process() {
     return (
-        <section className="py-24 px-4 relative">
+        <section id="process" className="py-24 px-4 relative">
             <div className="max-w-6xl mx-auto">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}

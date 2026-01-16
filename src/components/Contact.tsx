@@ -15,7 +15,7 @@ export default function Contact() {
     };
 
     return (
-        <section id="contact" className="py-24 px-4 relative overflow-hidden">
+        <section id="contact" className="py-20 px-4 relative z-10">
             <div className="max-w-xl mx-auto relative z-10">
 
                 {/* Main Card */}

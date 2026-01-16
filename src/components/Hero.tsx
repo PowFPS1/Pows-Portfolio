@@ -21,7 +21,7 @@ const FloatingCard = ({ text, author, className, delay }: { text: string; author
 
 export default function Hero() {
     return (
-        <section className="relative h-screen flex flex-col items-center justify-center text-center px-4 z-10 overflow-hidden">
+        <section id="home" className="relative h-screen flex flex-col items-center justify-center text-center px-4 z-10 overflow-hidden">
 
             {/* Floating Testimonials */}
             <FloatingCard

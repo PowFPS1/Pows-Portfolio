@@ -30,6 +30,18 @@
   }
 }
 
+@keyframes floating {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(var(--move-x, 20px), var(--move-y, 20px));
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
 @keyframes shoot {
   0% {
     transform: translateX(0) translateY(0) rotate(-45deg);

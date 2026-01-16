@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fugaz_One, Open_Sans } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
+import Navbar from "@/components/Navbar";
 
 const fugazOne = Fugaz_One({
   weight: "400",
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${openSans.variable} ${fugazOne.variable} antialiased bg-[#0a0a0a] text-white overflow-x-hidden`}
       >
+        <Navbar />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
