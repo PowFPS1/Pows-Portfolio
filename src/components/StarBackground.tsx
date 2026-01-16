@@ -56,11 +56,9 @@ const StarBackground = () => {
             id,
             left: Math.random() * 100,
             top: Math.random() * 50, // Keep them in upper half mostly
-            duration: Math.random() * 3 + 2, // 2-5s duration for faster checks (CSS handles display time)
-            delay: Math.random() * 10 + 2,     // Random start delay
-            angle: Math.random() * 120 + 30, // 30 to 150 degrees (Down-Right to Down-Left)
-            // 0 is Right, 90 is Down, 180 is Left. 
-            // So 30-150 ensures they always go down (y+) with variance in x.
+            duration: Math.random() * 3 + 4, // 4-7s duration (Slower)
+            delay: Math.random() * 5 + 2,
+            angle: Math.random() > 0.5 ? (Math.random() * 40 + 10) : (Math.random() * 40 + 130), // 10-50 (Right-Down) or 130-170 (Left-Down)
             length: Math.random() * 100 + 150, // 150-250px length
             key: Math.random(),
         };
