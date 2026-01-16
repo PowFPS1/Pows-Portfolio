@@ -58,11 +58,9 @@ const StarBackground = () => {
             top: Math.random() * 50, // Keep them in upper half mostly
             duration: Math.random() * 3 + 2, // 2-5s duration for faster checks (CSS handles display time)
             delay: Math.random() * 10 + 2,     // Random start delay
-            angle: Math.random() * 30 + 30 + 135, // 165 to 195 degrees (down-left-ish) or adjust as needed. 135 is diagonal. 
-            // Let's standardise on -45deg visual, but we can rotate container. 
-            // Actually, let's keep it simple: 30-60 degrees variance.
-            // 45 degrees is standard diagonal. Let's vary from 30 to 60.
-            // Note: CSS rotate is -45deg. We'll add variance in CSS variable.
+            angle: Math.random() * 120 + 30, // 30 to 150 degrees (Down-Right to Down-Left)
+            // 0 is Right, 90 is Down, 180 is Left. 
+            // So 30-150 ensures they always go down (y+) with variance in x.
             length: Math.random() * 100 + 150, // 150-250px length
             key: Math.random(),
         };
