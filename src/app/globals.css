@@ -34,9 +34,11 @@
   0% {
     transform: translate(0, 0);
   }
+
   50% {
     transform: translate(var(--move-x, 20px), var(--move-y, 20px));
   }
+
   100% {
     transform: translate(0, 0);
   }
@@ -44,21 +46,31 @@
 
 @keyframes shoot {
   0% {
-    transform: translateX(0) translateY(0) rotate(-45deg);
+    transform: rotate(var(--angle, -45deg)) translateX(0);
+    width: 0;
     opacity: 0;
   }
 
-  10% {
+  5% {
     opacity: 1;
+    width: var(--length, 150px);
+  }
+
+  15% {
+    opacity: 0;
+    /* Fade out as it travels */
   }
 
   20% {
-    transform: translateX(300px) translateY(300px) rotate(-45deg);
+    transform: rotate(var(--angle, -45deg)) translateX(1000px);
+    /* Move far */
+    width: 0;
     opacity: 0;
   }
 
   100% {
-    transform: translateX(300px) translateY(300px) rotate(-45deg);
+    transform: rotate(var(--angle, -45deg)) translateX(1000px);
+    width: 0;
     opacity: 0;
   }
 }
@@ -73,12 +85,14 @@
 
 .shooting-star {
   position: absolute;
-  width: 100px;
-  height: 2px;
+  height: 1px;
   background: linear-gradient(90deg, rgba(255, 255, 255, 1), transparent);
-  animation: shoot 10s linear infinite;
-  animation-delay: var(--delay, 0s);
+  border-radius: 999px;
   opacity: 0;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  animation: shoot ease-out infinite;
+  /* duration set inline */
+  transform-origin: left center;
 }
 
 body {

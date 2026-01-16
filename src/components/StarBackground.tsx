@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 
 interface StarType {
     id: number;
@@ -21,6 +21,9 @@ interface ShootingStarType {
     top: number;
     duration: number;
     delay: number;
+    angle: number;
+    length: number;
+    key: number; // Used to reset animation
 }
 
 const StarBackground = () => {
@@ -28,30 +31,56 @@ const StarBackground = () => {
     const [shootingStars, setShootingStars] = useState<ShootingStarType[]>([]);
 
     useEffect(() => {
-        // Generate static stars with movement
+        // Generate static stars
         const newStars = Array.from({ length: 150 }).map((_, i) => ({
             id: i,
             left: Math.random() * 100,
             top: Math.random() * 100,
-            size: Math.random() * 3 + 1, // 1px to 4px
-            twinkleDuration: Math.random() * 5 + 3, // 3-8s
+            size: Math.random() * 3 + 1,
+            twinkleDuration: Math.random() * 5 + 3,
             twinkleDelay: Math.random() * 5,
-            moveDuration: Math.random() * 20 + 20, // 20-40s
+            moveDuration: Math.random() * 20 + 20,
             moveDelay: Math.random() * 10,
-            moveX: Math.random() * 100 - 50, // -50 to 50px
+            moveX: Math.random() * 100 - 50,
             moveY: Math.random() * 100 - 50,
         }));
         setStars(newStars);
 
-        // Generate shooting stars
-        const newShootingStars = Array.from({ length: 3 }).map((_, i) => ({
-            id: i,
-            left: Math.random() * 80,
-            top: Math.random() * 50,
-            duration: Math.random() * 5 + 5,
-            delay: Math.random() * 15,
-        }));
-        setShootingStars(newShootingStars);
+        // Initial shooting stars setup
+        const initialShootingStars = Array.from({ length: 4 }).map((_, i) => createShootingStar(i));
+        setShootingStars(initialShootingStars);
+    }, []);
+
+    const createShootingStar = (id: number): ShootingStarType => {
+        return {
+            id,
+            left: Math.random() * 100,
+            top: Math.random() * 50, // Keep them in upper half mostly
+            duration: Math.random() * 3 + 2, // 2-5s duration for faster checks (CSS handles display time)
+            delay: Math.random() * 10 + 2,     // Random start delay
+            angle: Math.random() * 30 + 30 + 135, // 165 to 195 degrees (down-left-ish) or adjust as needed. 135 is diagonal. 
+            // Let's standardise on -45deg visual, but we can rotate container. 
+            // Actually, let's keep it simple: 30-60 degrees variance.
+            // 45 degrees is standard diagonal. Let's vary from 30 to 60.
+            // Note: CSS rotate is -45deg. We'll add variance in CSS variable.
+            length: Math.random() * 100 + 150, // 150-250px length
+            key: Math.random(),
+        };
+    };
+
+    // We want to periodically "respawn" shooting stars to make them smarter/random
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setShootingStars(prev => prev.map(star => {
+                // Random chance to respawn a star if it's likely finished
+                if (Math.random() > 0.7) {
+                    return createShootingStar(star.id);
+                }
+                return star;
+            }));
+        }, 4000);
+
+        return () => clearInterval(interval);
     }, []);
 
     return (
@@ -82,12 +111,14 @@ const StarBackground = () => {
             ))}
             {shootingStars.map((star) => (
                 <div
-                    key={star.id}
+                    key={`${star.id}-${star.key}`} // Key change resets animation
                     className="shooting-star"
                     style={{
                         left: `${star.left}%`,
                         top: `${star.top}%`,
                         "--duration": `${star.duration}s`,
+                        "--length": `${star.length}px`,
+                        "--angle": `${star.angle}deg`, // We'll need to use this in CSS
                         animationDuration: `${star.duration}s`,
                         animationDelay: `${star.delay}s`,
                     } as React.CSSProperties}

@@ -12,10 +12,18 @@ const FloatingCard = ({ text, author, className, delay }: { text: string; author
             scale: { duration: 0.8, delay },
             y: { duration: 6, repeat: Infinity, ease: "easeInOut" }
         }}
-        className={`absolute hidden lg:block p-6 rounded-xl bg-black/80 backdrop-blur-md border border-white/10 max-w-[280px] z-0 ${className}`}
+        className={`absolute hidden lg:block p-5 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] max-w-[280px] z-0 group hover:border-white/20 transition-colors ${className}`}
     >
-        <p className="text-gray-300 text-sm italic mb-4">"{text}"</p>
-        <p className="text-right text-gray-400 text-xs font-bold">- {author}</p>
+        <div className="absolute -top-3 -left-3 bg-white/10 p-2 rounded-full border border-white/10 backdrop-blur-md">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-white/80">
+                <path d="M14.017 21L14.017 18C14.017 16.8954 13.1216 16 12.017 16H9C9.00001 15 9.00001 15 9 15C9 14 10 13 11 13H13C13.5523 13 14 12.5523 14 12V4C14 3.44772 13.5523 3 13 3H5C4.44772 3 4 3.44772 4 4V12C4 12.5523 4.44772 13 5 13C6.10457 13 7 13.8954 7 15V18C7 19.1046 6.10457 20 5 20H4C3.44772 20 3 20.4477 3 21C3 21.5523 3.44772 22 4 22H13C13.5523 22 14.017 21.5523 14.017 21ZM22 21V18C22 16.8954 21.1046 16 20 16H16.9999C16.9999 15 16.9999 15 16.9999 15C16.9999 14 17.9999 13 18.9999 13H20.9999C21.5522 13 21.9999 12.5523 21.9999 12V4C21.9999 3.44772 21.5522 3 20.9999 3H12.9999C12.4476 3 11.9999 3.44772 11.9999 4V12C11.9999 12.5523 12.4476 13 12.9999 13C14.1045 13 14.9999 13.8954 14.9999 15V18C14.9999 19.1046 14.1045 20 12.9999 20H11.9999C11.4476 20 10.9999 20.4477 10.9999 21C10.9999 21.5523 11.4476 22 11.9999 22H20.9999C21.5522 22 22 21.5523 22 21Z" />
+            </svg>
+        </div>
+        <p className="text-gray-200 text-sm font-light mb-4 leading-relaxed">"{text}"</p>
+        <div className="flex items-center justify-end gap-2">
+            <div className="h-[1px] w-8 bg-white/20"></div>
+            <p className="text-gray-400 text-xs font-bold tracking-wider uppercase">{author}</p>
+        </div>
     </motion.div>
 );
 
