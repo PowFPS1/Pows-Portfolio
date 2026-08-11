@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans);
+  --font-fugaz: var(--font-fugaz);
+  --color-primary: #ffffff;
+}
+
+/* ─── Utilities ──────────────────────────────────────── */
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.18);
+  }
+}
+
+/* ─── Star / Shooting-star animations ───────────────── */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes floating {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(var(--move-x, 20px), var(--move-y, 20px)); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes shoot {
+  0% {
+    transform: rotate(var(--angle, -45deg)) translateX(0);
+    width: 0;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+    width: var(--length, 150px);
+  }
+  15% { opacity: 0; }
+  20% {
+    transform: rotate(var(--angle, -45deg)) translateX(1000px);
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(var(--angle, -45deg)) translateX(1000px);
+    width: 0;
+    opacity: 0;
+  }
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  animation: twinkle var(--duration, 3s) infinite ease-in-out;
+  animation-delay: var(--delay, 0s);
+}
+
+.shooting-star {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1), transparent);
+  border-radius: 999px;
+  opacity: 0;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  animation: shoot ease-out infinite;
+  transform-origin: left center;
+}
+
+/* ─── Base ───────────────────────────────────────────── */
+body {
+  background: #050505;
+  color: #ffffff;
+}
+
+/* ─── Selection color ────────────────────────────────── */
+::selection {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
