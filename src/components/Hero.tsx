@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { ArrowDown, MessageCircle } from "lucide-react";
 
 const FloatingCard = ({
@@ -48,14 +48,14 @@ const stats = [
     { value: "50+", label: "Projects shipped" },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
     hidden: {},
     visible: {
         transition: { staggerChildren: 0.12, delayChildren: 0.1 },
     },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
     hidden: { opacity: 0, y: 28 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 };
