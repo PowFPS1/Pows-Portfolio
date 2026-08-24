@@ -7,7 +7,7 @@ const cards = [
     {
         icon: Code2,
         label: "Background",
-        body: "Started scripting at 12. What began as a hobby became a proper business — games I've contributed to have a combined 200M+ visits.",
+        body: "Started scripting at 12. What began as a hobby became a proper business, games I've contributed to have a combined 200M+ visits.",
         span: "col-span-1 md:col-span-2",
         accent: false,
     },
