@@ -86,17 +86,6 @@ export default function Hero() {
                 animate="visible"
                 className="relative z-10 w-full max-w-2xl"
             >
-                {/* Badge */}
-                <motion.div variants={itemVariants} className="flex justify-center mb-6">
-                    <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/[0.04] text-[11px] text-gray-400 tracking-widest uppercase backdrop-blur-sm">
-                        <span className="relative flex h-1.5 w-1.5">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-                            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500" />
-                        </span>
-                        Available for commissions
-                    </span>
-                </motion.div>
-
                 {/* Name */}
                 <motion.h1
                     variants={itemVariants}
