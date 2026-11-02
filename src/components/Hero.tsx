@@ -43,7 +43,7 @@ const FloatingCard = ({
 );
 
 const stats = [
-    { value: "5+", label: "Years scripting" },
+    { value: "6+", label: "Years scripting" },
     { value: "200M+", label: "Visits contributed" },
     { value: "50+", label: "Projects shipped" },
 ];
